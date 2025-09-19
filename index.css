@@ -1,0 +1,67 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffffff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(3, 120px);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+}
+
+/* Each cell */
+.col {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Add only inner borders */
+.col {
+  border: 2px solid #000;
+}
+
+.row:first-child .col {
+  border-top: none;
+}
+.row:last-child .col {
+  border-bottom: none;
+}
+.col:first-child {
+  border-left: none;
+}
+.col:last-child {
+  border-right: none;
+}
+
+/* Hover effect (optional) */
+.col:hover {
+  background-color: #f7f7f7;
+}
